@@ -1,0 +1,40 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"outDir": "../../dist/out-tsc",
+		// "types": [
+		// 	"node"
+		// ],
+		"baseUrl": ".",
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"resolveJsonModule": true,
+		"importHelpers": true,
+		"removeComments": true,
+		"noImplicitAny": false,
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"useUnknownInCatchVariables": false,
+		"allowJs": true,
+		"esModuleInterop": true,
+		"target": "es2021",
+		"module": "commonjs",
+		"lib": [
+			"es2020",
+			"dom"
+		],
+		"paths": {}
+	},
+	"exclude": [
+		"node_modules",
+		"tmp"
+	],
+	"include": [
+		"**/*.ts"
+	]
+}

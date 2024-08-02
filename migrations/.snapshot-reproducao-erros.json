@@ -1,0 +1,555 @@
+{
+  "namespaces": [
+    "public"
+  ],
+  "name": "public",
+  "tables": [
+    {
+      "columns": {
+        "classe_id": {
+          "name": "classe_id",
+          "type": "serial",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "classe_sigla": {
+          "name": "classe_sigla",
+          "type": "varchar(10)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 10,
+          "mappedType": "string"
+        },
+        "classe_descricao": {
+          "name": "classe_descricao",
+          "type": "varchar(80)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 80,
+          "mappedType": "string"
+        }
+      },
+      "name": "sft_classe",
+      "schema": "public",
+      "indexes": [
+        {
+          "keyName": "sft_classe_pkey",
+          "columnNames": [
+            "classe_id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "ncmsh_id": {
+          "name": "ncmsh_id",
+          "type": "serial",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "ncmsh_codigo": {
+          "name": "ncmsh_codigo",
+          "type": "varchar(20)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 20,
+          "mappedType": "string"
+        },
+        "ncmsh_grupo": {
+          "name": "ncmsh_grupo",
+          "type": "varchar(20)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 20,
+          "mappedType": "string"
+        },
+        "ncmsh_sub_grupo": {
+          "name": "ncmsh_sub_grupo",
+          "type": "varchar(20)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 20,
+          "mappedType": "string"
+        },
+        "ncmsh_descricao": {
+          "name": "ncmsh_descricao",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
+        "ncmsh_descricao1": {
+          "name": "ncmsh_descricao1",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
+        "ncmsh_descricao2": {
+          "name": "ncmsh_descricao2",
+          "type": "text",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "text"
+        },
+        "usr_codigo_cadastro": {
+          "name": "usr_codigo_cadastro",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        },
+        "usr_codigo": {
+          "name": "usr_codigo",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        },
+        "ncmsh_data_cadastro": {
+          "name": "ncmsh_data_cadastro",
+          "type": "timestamptz(6)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 6,
+          "mappedType": "datetime"
+        },
+        "ncmsh_data_alteracao": {
+          "name": "ncmsh_data_alteracao",
+          "type": "timestamptz(6)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 6,
+          "mappedType": "datetime"
+        },
+        "ncmsh_ativo": {
+          "name": "ncmsh_ativo",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        }
+      },
+      "name": "sft_ncmsh",
+      "schema": "public",
+      "indexes": [
+        {
+          "columnNames": [
+            "ncmsh_codigo"
+          ],
+          "composite": false,
+          "keyName": "sft_ncmsh_ncmsh_codigo_idx",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "sft_ncmsh_pkey",
+          "columnNames": [
+            "ncmsh_id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "produt_id": {
+          "name": "produt_id",
+          "type": "serial",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "produt_descricao": {
+          "name": "produt_descricao",
+          "type": "varchar(120)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 120,
+          "mappedType": "string"
+        },
+        "produt_ativo": {
+          "name": "produt_ativo",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        },
+        "produt_data_alteracao": {
+          "name": "produt_data_alteracao",
+          "type": "timestamptz(6)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 6,
+          "mappedType": "datetime"
+        },
+        "produt_data_cadastro": {
+          "name": "produt_data_cadastro",
+          "type": "timestamptz(6)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 6,
+          "mappedType": "datetime"
+        },
+        "usr_codigo_cadastro": {
+          "name": "usr_codigo_cadastro",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        },
+        "classe_id": {
+          "name": "classe_id",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        },
+        "ncmsh_id": {
+          "name": "ncmsh_id",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        }
+      },
+      "name": "sft_produto",
+      "schema": "public",
+      "indexes": [
+        {
+          "columnNames": [
+            "produt_descricao"
+          ],
+          "composite": false,
+          "keyName": "sft_produto_produt_descricao_idx",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "classe_id"
+          ],
+          "composite": false,
+          "keyName": "sft_produto_classe_id_idx",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "ncmsh_id"
+          ],
+          "composite": false,
+          "keyName": "sft_produto_ncmsh_id_idx",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "sft_produto_pkey",
+          "columnNames": [
+            "produt_id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "sft_produto_classe_id_foreign": {
+          "constraintName": "sft_produto_classe_id_foreign",
+          "columnNames": [
+            "classe_id"
+          ],
+          "localTableName": "public.sft_produto",
+          "referencedColumnNames": [
+            "classe_id"
+          ],
+          "referencedTableName": "public.sft_classe",
+          "deleteRule": "set null",
+          "updateRule": "cascade"
+        },
+        "sft_produto_ncmsh_id_foreign": {
+          "constraintName": "sft_produto_ncmsh_id_foreign",
+          "columnNames": [
+            "ncmsh_id"
+          ],
+          "localTableName": "public.sft_produto",
+          "referencedColumnNames": [
+            "ncmsh_id"
+          ],
+          "referencedTableName": "public.sft_ncmsh",
+          "deleteRule": "set null",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "subpro_id": {
+          "name": "subpro_id",
+          "type": "serial",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "subpro_comercial": {
+          "name": "subpro_comercial",
+          "type": "varchar(120)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 120,
+          "mappedType": "string"
+        },
+        "subpro_volume": {
+          "name": "subpro_volume",
+          "type": "numeric(18,6)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "precision": 18,
+          "scale": 6,
+          "mappedType": "decimal"
+        },
+        "subpro_peso_liquido": {
+          "name": "subpro_peso_liquido",
+          "type": "numeric(18,4)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "precision": 18,
+          "scale": 4,
+          "default": "0",
+          "mappedType": "decimal"
+        },
+        "subpro_peso_bruto": {
+          "name": "subpro_peso_bruto",
+          "type": "numeric(18,4)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "precision": 18,
+          "scale": 4,
+          "default": "0",
+          "mappedType": "decimal"
+        },
+        "subpro_ean": {
+          "name": "subpro_ean",
+          "type": "varchar(50)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 50,
+          "mappedType": "string"
+        },
+        "subpro_codigo": {
+          "name": "subpro_codigo",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        },
+        "subpro_ativo": {
+          "name": "subpro_ativo",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        },
+        "subpro_codigo_fornecedor": {
+          "name": "subpro_codigo_fornecedor",
+          "type": "varchar(50)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 50,
+          "mappedType": "string"
+        },
+        "subpro_data_cadastro": {
+          "name": "subpro_data_cadastro",
+          "type": "timestamptz(6)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 6,
+          "mappedType": "datetime"
+        },
+        "subpro_data_alteracao": {
+          "name": "subpro_data_alteracao",
+          "type": "timestamptz(6)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 6,
+          "mappedType": "datetime"
+        },
+        "produt_id": {
+          "name": "produt_id",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "integer"
+        }
+      },
+      "name": "sft_sub_produto",
+      "schema": "public",
+      "indexes": [
+        {
+          "columnNames": [
+            "subpro_comercial"
+          ],
+          "composite": false,
+          "keyName": "sft_sub_produto_subpro_comercial_desc_idx",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "produt_id"
+          ],
+          "composite": false,
+          "keyName": "sft_sub_produto_produt_id_unique",
+          "constraint": true,
+          "primary": false,
+          "unique": true
+        },
+        {
+          "keyName": "sft_sub_produto_subpro_comercial_subpro_ativo_idx",
+          "columnNames": [
+            "subpro_comercial",
+            "subpro_ativo"
+          ],
+          "composite": true,
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "sft_sub_produto_subpro_ativo_produt_id_subpro_comercial_idx",
+          "columnNames": [
+            "subpro_ativo",
+            "produt_id",
+            "subpro_comercial"
+          ],
+          "composite": true,
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "sft_sub_produto_pkey",
+          "columnNames": [
+            "subpro_id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "sft_sub_produto_produt_id_foreign": {
+          "constraintName": "sft_sub_produto_produt_id_foreign",
+          "columnNames": [
+            "produt_id"
+          ],
+          "localTableName": "public.sft_sub_produto",
+          "referencedColumnNames": [
+            "produt_id"
+          ],
+          "referencedTableName": "public.sft_produto",
+          "deleteRule": "set null",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    }
+  ],
+  "nativeEnums": {}
+}

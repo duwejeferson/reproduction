@@ -1,5 +1,7 @@
 # Reproduction repo for [A Second "unnecessary" query being fired searching for infos that were already on the first one](https://github.com/mikro-orm/mikro-orm/discussions/5889#discussioncomment-10216200)
 
+## Fixed!
+
 ## Steps to reproduce
 * Install dependecies `pnpm i`;
 * Run migrations `pnpm exec mikro-orm migration:up`
